@@ -1,46 +1,39 @@
 <!DOCTYPE html>
-
-<head>
-    <title>Javascript_calculator</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <script src="script.js" type="text/javascript" ></script>
-    <meta charset="UTF-8">
-</head> 
-
-<body>
-    <div class="title"> Calculator</div>
-    <div class="calculatorFrame">
-        <div data-current-operand class="calculatorScreen">
-            <div data-previus-operand class="previusScreen"></div>
-            <div data-current-operand class="currentScreen"></div>
-
-        </div>
-        <div class="calculatorKeysFrame">
-            <div class="calculatorOperationsKeysFrame">
-                <button data-operation class="operation additionButton">+</button>
-                <button data-operation class="operation subtractionButton">-</button>
-                <button data-operation class="operation multiplicationButton">x</button>
-                <button data-operation class="operation divisionButton">/</button>
-                <button data-delete class="operation eraseButton">-></button>
-                <button data-clear class="operation clearButton">C</button>
-                
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript_calculator</title>
+        <link href="style2.css" type="text/css" rel="stylesheet">
+        <script src="script.js" type="text/javascript" defer ></script>
+        
+    </head> 
+    <body>
+        <div class="calculator-grid">
+            <div class="output">
+                <div class="previous-operand"></div>
+                <div class="current-operand"></div>
             </div>
-            <div class="calculatorNumberKeysFrame">
-                
-                <button data-number class="number namber9">9</button>
-                <button data-number class="number namber8">8</button>
-                <button data-number class="number namber7">7</button>
-                <button data-number class="number namber6">6</button>
-                <button data-number class="number namber5">5</button>
-                <button data-number class="number namber4">4</button>
-                <button data-number class="number namber3">3</button>
-                <button data-number class="number namber2">2</button>
-                <button data-number class="number namber1">1</button>
-                <button data-number class="number namber0">0</button>
-                <button data-number class="number dot">.</button>
-                <button data-equals class="number equals">=</button>
-
-            </div>
-        </div>
-    </div>
-</body>
+                <button class="span-two">AC</button>
+                <button>DEL</button>
+                <button>/</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>*</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>+</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>-</button>
+                <button>.</button>
+                <button>0</button>
+                <button class="span-two">=</button>
+              
+        </div>    
+    </body>
+   
+</html>
