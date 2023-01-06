@@ -1,4 +1,3 @@
-
 class Calculator {
         constructor(previousOperandTextElement, currentOperandTextElement){
             this.previousOperandTextElement = previousOperandTextElement;
@@ -17,7 +16,8 @@ class Calculator {
         }
 
         appendNumber(number){
-            this.currentOperand = number
+            if(number === '.' && this.currentOperand.includes('.')) return
+            this.currentOperand = this.currentOperand.toString() + number.toString()
         
             /* numberButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -36,7 +36,7 @@ class Calculator {
         }
 
         updateDisplay() {
-            console.log("updating display")
+            //console.log("updating display")
             this.currentOperandTextElement.innerText = this.currentOperand
         }
 }
@@ -53,8 +53,14 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () =>{
-        console.log("test")
         calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+    
+})
+operationButtons.forEach(button => {
+    button.addEventListener('click', () =>{
+        calculator.chooseOperation(button.innerText)
         calculator.updateDisplay()
     })
     
