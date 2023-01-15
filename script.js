@@ -12,6 +12,7 @@ class Calculator {
         //const calculator = new calculator(previusOperandTextElement, currentOperandTextElement)
 
         delete(){
+            this.currentOperand = this.currentOperand.toString().slice(0,-1)
 
         }
 
@@ -104,5 +105,10 @@ equalsButton.addEventListener('click', button =>{
 clearButton.addEventListener('click', button =>{
     console.log('cleared')
     calculator.clear()
+    calculator.updateDisplay()
+})
+deleteButton.addEventListener('click', button =>{
+    console.log('deleted')
+    calculator.delete()
     calculator.updateDisplay()
 })
