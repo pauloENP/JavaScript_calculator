@@ -67,9 +67,16 @@ class Calculator {
         }
 
         updateDisplay() {
-            //console.log("updating display")
+            
             this.currentOperandTextElement.innerText = this.currentOperand
-            this.previousOperandTextElement.innerText = this.previusOperand
+            if(this.operation != null){
+                this.previousOperandTextElement.innerText = 
+                `${this.previusOperand} ${this.operation}`
+            }
+            if(this.previousOperand === this.previusOperand + this.currentOperand){
+                this.previousOperandTextElement.innerText = 
+                `${this.previusOperand} ${this.operation} ${this.currentOperand}`
+            }
         }
 }
 
